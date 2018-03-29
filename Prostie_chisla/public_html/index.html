@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script> 
+            var data = +prompt ("Введите N элемент полседователности простых чисел (1..N)", 'N');
+            
+            pass:
+                    for (var step = 2; step <= data; step++){
+                        
+                        for (var step_one = 2; step_one < step; step_one++){
+                            
+                           if (step % step_one == 0)  continue pass;
+                        }
+                        alert ('Нажми "Ок" для продолжения последовательности: ' +step );
+                    }
+                    
+        </script>
+    </body>
+</html>

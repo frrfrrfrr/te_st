@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        var stroka = prompt ("Введите вашу строку: ", 'Строка'), coclusion;
+        function pal_in_drome(stroka) {
+            var stroka_length = stroka.length;
+            var res_ult = '';
+            for (var i = 0; i < stroka_length; i++) {
+              return (stroka[i] === stroka[stroka_length - 1 - i]) ? 
+              res_ult = 'Ваша строка является палиндромом!' :
+              res_ult = 'Ваша строка НЕ явлется палиндромом!';
+            }
+            return res_ult;
+        }
+        coclusion = pal_in_drome (stroka);
+        alert (coclusion);
+  </script>
+    </body>
+</html>

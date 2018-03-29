@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">       
+    </head>
+    <body>
+        <script>
+            var data = prompt ('Введите число N в', '');
+                fib_chi = function f(data){
+                return data <= 1 ? data : f(data - 1) + f(data - 2);
+            }
+            alert (fib_chi(data));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script> 
+            
+        var data_first = prompt ("Введит первое число для которого бдуем искать НОД и НОК: ", 'First');
+        var data_second = prompt ("Введит второе число для которого бдуем искать НОД и НОК:", 'Second');
+        
+        var NOD = function NOD (data_first, data_second) { 
+            return data_second ? NOD(data_second, data_first % data_second) : data_first;}
+    
+        alert ('NOD = ' + NOD(data_first, data_second));
+        
+        var NOK = function NOK (data_first,data_second){
+            return ( data_first * data_second) / NOD(data_first, data_second);}
+        
+        alert ('NOK = ' + NOK(data_first, data_second));
+        </script>
+    </body>
+</html>

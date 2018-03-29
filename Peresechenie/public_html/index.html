@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script> 
+            
+             var ax1 = +prompt ("Введите x1 (первой прямой): ", 'x1');
+             var ax2 = +prompt ("Введите x2 (первой прямой): ", 'x2');
+             var ay1 = +prompt ("Введите y1 (первой прямой): ", 'y1');
+             var ay2 = +prompt ("Введите y2 (первой прямой): ", 'y2');
+             
+             var bx1 = +prompt ("Введите x1 (второй прямой): ", 'x1');
+             var bx2 = +prompt ("Введите x2 (второй прямой): ", 'x2');
+             var by1 = +prompt ("Введите y1 (второй прямой): ", 'y1');
+             var by2 = +prompt ("Введите y2 (второй прямой): ", 'y2');
+             
+             var pere_sechenie = function pere_sechenie (ax1, ax2, ay1, ay2, bx1, bx2, by1, by2){
+                 
+                 scht1 = (bx2-bx1)*(ay1-by1)-(by2-by1)*(ax1-bx1);
+                 scht2 = (bx2-bx1)*(ay2-by1)-(by2-by1)*(ax2-bx1);
+                 scht3 = (ax2-ax1)*(by1-ay1)-(ay2-ay1)*(bx1-ax1);
+                 scht4 = (ax2-ax1)*(by2-ay1)-(ay2-ay1)*(bx2-ax1);
+                 
+                return ((scht1*scht2<=0) && (scht3*scht4<=0));
+             }
+             
+             if (pere_sechenie == true) {
+                 alert ('Отрезки пересекаются.')
+             } else {
+                 alert ('Отрезки НЕ пересекаются.')
+             }
+        </script>
+    </body>
+</html>
